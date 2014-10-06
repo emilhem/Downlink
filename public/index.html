@@ -7,9 +7,31 @@
 	<link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-	<h1>Downlink</h1>
+	<div id="serverList" class="nano w-20">
+		<div class="nano-content">
+			<ul></ul>
+		</div>
+	</div>
+	<div id="hacking" class="w-80">
+		<div id="tabs">
+			<ul>
+				<li id="addConnection">+</li>
+			</ul>
+		</div>
+		<div id="terminal">
+			<div class="nano max-height">
+				<div class="nano-content">
+					<pre></pre>
+				</div>
+			</div>
+		</div>
+		<div id="input">
+			<input type="text">
+		</div>
+	</div>
 
 	<script src="/js/jquery-2.1.1.min.js"></script>
+	<script src="/js/jquery.nanoscroller.min.js"></script>
 	<script src="/js/script.js"></script>
 </body>
 </html>

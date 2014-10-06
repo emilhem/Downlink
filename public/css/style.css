@@ -1,7 +1,213 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 html, body {
 	width: 100%;
 	height: 100%;
-	margin: 0;
-	padding: 0;
 	border: 0;
+	background-color: #000000;
+	color: #00FF00;
+	font-size: 12px;
 }
+
+li {
+	list-style: none;
+}
+
+li:hover {
+	background-color: #002200;
+}
+
+.w-50 {
+	float: left;
+	width: 50%;
+}
+
+.w-70 {
+	float: left;
+	width: 70%;
+}
+
+.w-30 {
+	float: left;
+	width: 30%;
+}
+
+.w-80 {
+	float: left;
+	width: 80%;
+}
+
+.w-20 {
+	float: left;
+	width: 20%;
+}
+
+.selected {
+	background-color: #004400;
+}
+
+input {
+	background-color: #000000;
+	border: 0;
+	padding: 2px;
+}
+
+/*button {
+	border: 3px outset #004400;
+	border-style: outset;
+	padding: 5px;
+	background-color: #000000;
+}
+button:focus {
+
+}
+button:hover {
+	background-color: #333333;
+}
+button:active {
+	border-style: inset;
+}*/
+
+
+#serverList {
+	height: 100%;
+	border-right: 1px solid #00FF00;
+}
+
+#hacking {
+	height: 100%;
+	position: relative;
+}
+
+#tabs {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border-bottom: 1px solid #00FF00;
+	z-index: 20;
+	background-color: #000000;
+}
+
+#tabs ul {
+	font-size: 0;
+}
+
+#tabs li {
+	font-size: 12px;
+	display: inline-block;
+	padding: 5px;
+	border: 0;
+	border-right: 1px;
+	border-style: solid;
+	border-color: #00FF00;
+}
+
+#tabs li:hover {
+	cursor: pointer;
+}
+
+#terminal {
+	height: 100%;
+	padding: 26px 0 20px 4px;
+}
+
+#terminal pre {
+	padding-bottom: 2px;
+}
+
+#input {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding-left: 12px;
+	width: 100%;
+	border-top: 1px solid #00FF00;
+	z-index: 20;
+	background-color: #000000;
+}
+
+#input:before {
+	position: absolute;
+	bottom: 2px;
+	left: 3px;
+	content: ">";
+}
+
+#input input {
+	width: 100%;
+	font-family: monospace;
+}
+
+#shit {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 1000;
+}
+#shit img {
+	max-width: 100%;
+	max-height: 100%;
+	margin: 0 auto;
+}
+
+.max-height {
+	height: 100%;
+}
+
+/** initial setup **/
+.nano {
+	position : relative;
+	overflow : hidden;
+}
+.nano > .nano-content {
+	position      : absolute;
+	overflow      : scroll;
+	overflow-x    : hidden;
+	top           : 0;
+	right         : 0;
+	bottom        : 0;
+	left          : 0;
+}
+.nano > .nano-content:focus {
+	outline: thin dotted;
+}
+.nano > .nano-content::-webkit-scrollbar {
+	display: none;
+}
+.has-scrollbar > .nano-content::-webkit-scrollbar {
+	display: block;
+}
+.nano > .nano-pane {
+	background : rgba(0,0,0,.25);
+	position   : absolute;
+	width      : 10px;
+	right      : 0;
+	top        : 0;
+	bottom     : 0;
+	visibility : hidden\9; /* Target only IE7 and IE8 with this hack */
+	/*opacity    : .01;
+	-webkit-transition    : .2s;
+	-moz-transition       : .2s;
+	-o-transition         : .2s;
+	transition            : .2s;*/
+}
+.nano > .nano-pane > .nano-slider {
+	background: #444;
+	background: rgba(0,0,0,.5);
+	position              : relative;
+	margin                : 0 1px;
+}
+/*.nano:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {
+	visibility : visible\9; /* Target only IE7 and IE8 with this hack */
+/*	opacity    : 1.00;
+}*/
+
+.nano .nano-content { padding: 10px; }
+.nano .nano-pane   { background: #00FF00; }
+.nano .nano-slider { background: #00FF00; }
